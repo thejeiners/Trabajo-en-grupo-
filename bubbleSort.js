@@ -1,17 +1,17 @@
-const bubbleSort = (A) => {
-    let N = A.length;
-    let i  = 0;
-    while(i < N-1){
-        let j = 0;
-        while(j < N-i-1){
-            if(A[j].name > A[j+1].name){
-                let temp = A[j];
-                A[j] = A[j+1];
-                A[j+1] = temp;
+const bubbleSort = (A) => {//se crea una funcion que requiere un argumente, un arreglo
+    let N = A.length;// se crea la variable N y se inicializa con el tamaño del arreglo
+    let i  = 0;// se crea yt se inicializa la variable i con cero
+    while(i < N-1){//se ejecutará el codigo de cero a la posición anterior al tamaño del arreglo
+        let j = 0;//crea e inicializa la variable j en 0
+        while(j < N-i-1){// mientras j sea menor a al tamaño del arreglo menos la posicion i, menos 1
+            if(A[j].name > A[j+1].name){//compara el nombre de la posicion inicial, con la siguiente si es mayor
+                let temp = A[j];// en la posicion inicial asigna el valor de la posicion J
+                A[j] = A[j+1];// actualiza el valor de la posicion j al de la posicion sigueinte
+                A[j+1] = temp;// actualiza el valor de la poscion siguiente al valor de temporal
             }
-            j=j+1;
+            j=j+1;// incrementa jota en uno
         }
-        i = i +1;
+        i = i +1;//incrementa i en uno
     }
     return A;
 }
