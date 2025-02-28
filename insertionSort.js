@@ -6,7 +6,7 @@ const insertionSort = (A) => {
         let current = A[i];
         let j = i - 1;
 
-        while (j >= 0 && A[j] > current) {
+        while (j >= 0 && A[j].name > current.name) {
             A[j + 1] = A[j];
             j = j - 1;
         }
@@ -18,6 +18,23 @@ const insertionSort = (A) => {
     return A;
 }
 
+
+let B =[
+    {"name": "Camila","code":1},
+    {"name": "Daniel","code":2},
+    {"name": "Sofía","code":3},
+    {"name": "Juan","code":4},
+    {"name": "Valentina","code":5},
+    {"name": "Carlos","code":6},
+    {"name": "Isabella","code":7},
+    {"name": "Andrés","code":8},
+    {"name": "Mariana","code":9},
+    {"name": "Felipe","code":10}
+]
+
+console.log(insertionSort(B))
+
+/*
 // Pruebas
 // Prueba 1
 let result1 = insertionSort([5, 2, 9, 1, 5, 6]);
@@ -38,7 +55,7 @@ console.log(result3);
 let result4 = insertionSort([100, 1, 2, -5, 0, 99]);
 console.log(result4); 
 // Resultado 4: [-5, 0, 1, 2, 99, 100]
-
+*/
 
 /*
 posible mejora
