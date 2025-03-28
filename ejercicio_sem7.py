@@ -18,6 +18,10 @@ class Stack:
         popped_value = self.top.value
         self.top = self.top.next
         return popped_value
+    
+    
+
+    
 
 stack = Stack()
 stack.push(1)
